@@ -1,0 +1,237 @@
+body {
+    background: linear-gradient(0deg, #ff9d4d 54%, #ffb98a 100%);
+}
+
+#a {
+    color: #ef7e4e;
+    background-color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Fredoka One', sans-serif;
+    margin-top: 18px;
+    margin-bottom: 10px;
+} 
+
+#titulo1 {
+    color: rgb(255, 255, 255);
+    background-color: #2c3748;
+ 
+    text-align: center;
+    margin-top: 40%;
+    font-size: 40px;
+    font-family: 'Fredoka One', sans-serif;
+}
+
+#titulo2,
+#titulo3,
+#titulo4{
+    color: #3a4454;
+    background-color: white;
+    font-size: 23px;
+    font-family: 'Fredoka One', sans-serif;
+}
+
+p {
+    color: #db635c; /* Color del texto */
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+#texto1{
+    color: #000000;
+}
+
+#button {
+    background-color: #ef7e4e;
+    color: #2f3237;
+    padding: 15px 200px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: right;
+    margin-top: 0.8%;
+    margin-left: 20%;
+    font-size: 25px;
+    font-family: 'Fredoka One', sans-serif;
+    position: relative; /* Agrega posición relativa */
+    bottom: 0; /* Ajusta la posición vertical desde la parte inferior */
+
+}
+
+#button:hover {
+    background-color: #fba987;
+}
+
+.caja {
+    display: flex;
+    width: 90%;
+    height: 650px;
+    margin: 0 auto;
+    padding: 0; /* Elimina el relleno para evitar espacios innecesarios */
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background-color: #2c3748;
+    overflow: hidden; /* Evita el desbordamiento del contenido */
+    height: 94vh;
+}
+
+
+.caja1 {
+    background-color:#2c3748;
+    color: #2c3748;
+    padding: 20px;
+    
+    border-radius: 10px;
+    flex: 30%;
+    border-bottom-right-radius: 20px;
+    height: 100%; /* Utiliza todo el alto de la caja contenedora */
+    margin: 0; /* Elimina los márgenes predeterminados */
+}
+
+.caja2 {
+    background-color: #ffffff;
+    padding: 20px;
+    
+    border-radius: 10px;
+    flex: 70%;
+    height: 100%; /* Utiliza todo el alto de la caja contenedora */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    border-top-left-radius: 100px;
+    
+}
+
+.campo {
+    margin-bottom: 40px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    font-family: 'Fredoka One', sans-serif;
+}
+
+.caja3 {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-bottom-right-radius: 100px;
+   
+}
+
+.botoninput { 
+    padding: 0.8% 35%; /* Ajuste en porcentaje */
+    max-width: 30%;
+    border: 2px solid #2f3237; /* Grosor y color del borde */
+    border-radius: 25px; /* Radio de los bordes para hacerlos redondeados */
+    font-size: 18px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Agrega transiciones suaves */
+    max-width: 300px;
+    font-family: 'Fredoka One', sans-serif;
+    margin-top: 10px;
+}
+.botoninput:hover {
+    background-color: #fba987;
+}
+.botonin { 
+    padding: 0.8% 38%; 
+    max-width: 30%;
+    border: 2px solid #2f3237; /* Grosor y color del borde */
+    border-radius: 25px; /* Radio de los bordes para hacerlos redondeados */
+    font-size: 18px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Agrega transiciones suaves */
+    max-width: 300px;
+    font-family: 'Fredoka One', sans-serif;
+    margin-top: 10px;
+}
+.botonin:hover {
+    background-color: #fba987;
+}
+.botinp { 
+    padding: 0.8% 10%; 
+    max-width: 30%;
+    border: 2px solid #2f3237; /* Grosor y color del borde */
+    border-radius: 25px; /* Radio de los bordes para hacerlos redondeados */
+    font-size: 18px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Agrega transiciones suaves */
+    max-width: 300px;
+    font-family: 'Fredoka One', sans-serif;
+    margin-top: 0;
+}
+.botinp:hover {
+    background-color: #fba987;
+}
+
+@media (max-width:1024px) {
+    .caja {
+        flex-direction: column;
+        height: 94vh; /* Ajustar la altura al 90% del viewport */
+    }
+
+    #titulo2,
+    #titulo3,
+    #titulo4 {
+        font-size: 13px;
+    }
+    
+    .caja1 {
+        border-bottom-left-radius: 0;
+        flex: 25%;
+    }
+    
+    #texto1 {
+        font-size: 13px;
+    }
+    
+    #a {
+        font-size: 20px;
+        margin-top: 18px;
+    } 
+    
+    #titulo1 {
+        color: white;
+        background-color: #2c3748;
+        text-align: center;
+        margin-top: 10%;
+        font-size: 30px;
+        font-family: 'Fredoka One', sans-serif;
+    }
+    
+    .caja2 {
+        border-top-left-radius: 100px;
+        flex: 70%;
+    }
+
+    .botoninput,
+    .botoninp,
+    .botonin
+     {
+        padding: 2% 5%; /* Ajuste en porcentaje */
+        font-size: 16px; /* Reducir el tamaño del texto para adaptarse */
+        margin-top: 5px; /* Ajustar el margen superior */
+        width: 90%; /* Ajuste para ocupar el 90% del ancho disponible */
+    }
+    
+    .campo {
+        margin-bottom: 20px; /* Reducir el espacio entre campos */
+    }
+    
+    #button {
+        padding: 3% 5%; /* Ajuste en porcentaje */
+        text-align: center;
+        margin: auto; /* Centrar vertical y horizontalmente */
+        font-size: 20px;
+        font-family: 'Fredoka One', sans-serif;
+        border: 2px solid #2f3237; /* Agrega el borde */
+        border-radius: 25px; /* Mantén los bordes redondeados */
+        width: 90%; 
+        max-width: 90%; /* Máximo ancho del botón */
+    }
+    
+    p {
+        font-size: 10px;
+        margin-bottom: 0px;
+    }
+}

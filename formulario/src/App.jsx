@@ -1,18 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import PaginaFormulario from './Components/PaginaFormulario'
-
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import PaginaFormulario from './Components/PaginaFormulario';
+import Pagina2 from './Components/Pagina2';
 
 function App() {
   return (
-    <>
-   <PaginaFormulario/>
-
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<PaginaFormulario />} />
+        <Route path="/pagina2" element={<Pagina2 />} />
+      </Routes>
+    </Router>
   );
 }
 
-export default App
+export default App;

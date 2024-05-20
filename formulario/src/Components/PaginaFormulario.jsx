@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import './EstilosFormulario.css';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import Pagina2 from './Pagina2'; // Import Pagina2 component
 
 export default function PaginaFormulario() {
   const { register, formState: { errors }, handleSubmit, setValue, watch } = useForm({
@@ -19,16 +20,16 @@ export default function PaginaFormulario() {
     const hoy = new Date();
     const fechaN = new Date(data.birth_date);
     const edad = hoy.getFullYear() - fechaN.getFullYear();
-        
+
     if (edad > 6) {
       setEdadError(true);
       return;
     }
-    
+
     const newData = mostrarSemanasGestacion ? { ...data } : { ...data, weeks_gestation: undefined };
-  
-    console.log('Datos a enviar:', newData); 
-    
+
+    console.log('Datos a enviar:', newData);
+
     try {
       const response = await axios.post('http://18.189.81.6:9000/api/patient/', newData, {
         headers: {
@@ -38,7 +39,7 @@ export default function PaginaFormulario() {
       console.log('Usuario creado correctamente:', response.data);
       window.alert('Usuario creado correctamente');
       setUsuarioCreado(true);
-      
+
     } catch (error) {
       console.error('Error al enviar los datos:', error.message);
       window.alert('Error al enviar los datos');
@@ -47,16 +48,16 @@ export default function PaginaFormulario() {
 
   useEffect(() => {
     if (usuarioCreado) {
-      navigate('/pagina2');
+      navigate('/pagina2', { state: { name: watch('name') } }); // Pass the name to the second page
     }
-  }, [usuarioCreado, navigate]);
+  }, [usuarioCreado, navigate, watch]);
 
   const handleFechaNacimientoChange = (event) => {
     const fechaN = new Date(event.target.value);
     const hoy = new Date();
     if (fechaN > hoy) {
       setErrorFechaNacimiento(true);
-      setMostrarSemanasGestacion(false); 
+      setMostrarSemanasGestacion(false);
     } else {
       const edad = hoy.getFullYear() - fechaN.getFullYear();
       if (edad < 3) {
@@ -66,7 +67,7 @@ export default function PaginaFormulario() {
       } else {
         setMostrarSemanasGestacion(false);
         setErrorFechaNacimiento(false);
-        setEdadError(false); 
+        setEdadError(false);
       }
     }
   };
@@ -82,7 +83,14 @@ export default function PaginaFormulario() {
     }
   };
 
-  const watchBirthDate = watch("birth_date"); 
+  const watchBirthDate = watch("birth_date");
+
+  const handleFormSubmit = (data) => {
+    if (errorNombre || errorFechaNacimiento || edadError) {
+      return; // Don't submit if there are validation errors
+    }
+    onSubmit(data);
+  };
 
   return (
     <div className="caja">
@@ -91,7 +99,7 @@ export default function PaginaFormulario() {
       </div>
       <div className="caja2">
         <h2 id="a">Datos del paciente</h2>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(handleFormSubmit)}>
           <div className="caja3">
             <div className="campo">
               <label id="titulo2">Nombre</label>
@@ -113,9 +121,9 @@ export default function PaginaFormulario() {
                 <p id="texto1">Para niños menores de 2 años es recomendable agregar las semanas de gestación.<br />
                   (en caso de dejar vacío, se toma por defecto 40 semanas)
                 </p>
-                <input className='botinp' type="number" {...register('weeks_gestation', { 
-                  required: true, 
-                  validate: value => parseInt(value) > 24 || "Las semanas de gestación deben ser mayores a 24" 
+                <input className='botinp' type="number" {...register('weeks_gestation', {
+                  required: true,
+                  validate: value => parseInt(value) > 24 || "Las semanas de gestación deben ser mayores a 24"
                 })} />
                 {errors.weeks_gestation && <p>{errors.weeks_gestation.message}</p>}
               </div>

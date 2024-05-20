@@ -1,47 +1,85 @@
 .dropdown {
-    position: relative;
-    display: inline-block;
-    
-    
-  }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
 
-  .dropdown-toggle {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    color: #333;
-    padding: 10px;
-    cursor: pointer;
-  }
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 5px); 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  background-color: rgb(248, 222, 207);
+  font-family: 'Fredoka One', sans-serif;
+}
+
+.dropdown-toggle {
+  background-color: #ffe9ca;
+  border: 1px solid #ccc;
+  color: #333;
+  padding: 15px 30px; 
+  cursor: pointer;
+  border-radius: 30px; 
+  font-family: 'Fredoka One', sans-serif;
+}
+
+.dropdown-toggle:hover {
+  background-color: #fba987; 
+}
+
+.dropdown-item {
+  padding: 10px; 
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #fba987;
+}
+
+#titulo10 {
+  color: #3a4454;
+  background-color: white;
+  font-size: 23px;
+  font-family: 'Fredoka One', sans-serif;
+}
+#re {
+  color: #ef7e4e;
   
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-top: none;
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    
-  }
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Fredoka One', sans-serif;
+  margin-top: 18px;
+  margin-bottom: 10px;
+} 
+#n {
+  color: #ffffff;
   
-  .dropdown-item {
-    padding: 10px;
-    cursor: pointer;
-  }
-  
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Fredoka One', sans-serif;
+  margin-top: 18px;
+  margin-bottom: 10px;
+} 
+.nombre-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.preguntas{
+  color: white;
+}
+
+@media (max-width: 1024px) {
   .dropdown-item:hover {
     background-color: #fba987;
   }
-  #titulo10{
-    color: #3a4454;
-    background-color: white;
-    font-size: 23px;
-    font-family: 'Fredoka One', sans-serif;
-}
-@media (max-width:1024px) {
-    .dropdown-item:hover {
-        background-color: #fba987;
-      }
 }

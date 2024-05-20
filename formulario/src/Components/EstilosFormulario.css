@@ -32,7 +32,7 @@ body {
 }
 
 p {
-    color: #db635c; /* Color del texto */
+    color: #db635c; 
     font-size: 14px;
     margin-bottom: 0px;
 }
@@ -53,8 +53,8 @@ p {
     margin-left: 20%;
     font-size: 25px;
     font-family: 'Fredoka One', sans-serif;
-    position: relative; /* Agrega posición relativa */
-    bottom: 0; /* Ajusta la posición vertical desde la parte inferior */
+    position: relative; 
+    bottom: 0; 
 
 }
 
@@ -67,11 +67,11 @@ p {
     width: 90%;
     height: 650px;
     margin: 0 auto;
-    padding: 0; /* Elimina el relleno para evitar espacios innecesarios */
+    padding: 0; 
     border: 1px solid #ffffff;
     border-radius: 10px;
     background-color: #2c3748;
-    overflow: hidden; /* Evita el desbordamiento del contenido */
+    overflow: hidden; 
     height: 94vh;
 }
 
@@ -84,8 +84,8 @@ p {
     border-radius: 10px;
     flex: 30%;
     border-bottom-right-radius: 20px;
-    height: 100%; /* Utiliza todo el alto de la caja contenedora */
-    margin: 0; /* Elimina los márgenes predeterminados */
+    height: 100%; 
+    margin: 0; 
 }
 
 .caja2 {
@@ -94,8 +94,8 @@ p {
     
     border-radius: 10px;
     flex: 70%;
-    height: 100%; /* Utiliza todo el alto de la caja contenedora */
-    margin: 0; /* Elimina los márgenes predeterminados */
+    height: 100%; 
+    margin: 0; 
     border-top-left-radius: 100px;
     
 }
@@ -119,13 +119,13 @@ label {
 }
 
 .botoninput { 
-    padding: 0.8% 35%; /* Ajuste en porcentaje */
+    padding: 0.8% 35%; 
     max-width: 30%;
-    border: 2px solid #2f3237; /* Grosor y color del borde */
-    border-radius: 25px; /* Radio de los bordes para hacerlos redondeados */
-    font-size: 18px; /* Tamaño del texto */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Agrega transiciones suaves */
+    border: 2px solid #2f3237; 
+    border-radius: 25px; 
+    font-size: 18px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
     max-width: 300px;
     font-family: 'Fredoka One', sans-serif;
     margin-top: 10px;
@@ -136,11 +136,11 @@ label {
 .botonin { 
     padding: 0.8% 38%; 
     max-width: 30%;
-    border: 2px solid #2f3237; /* Grosor y color del borde */
-    border-radius: 25px; /* Radio de los bordes para hacerlos redondeados */
-    font-size: 18px; /* Tamaño del texto */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Agrega transiciones suaves */
+    border: 2px solid #2f3237; 
+    border-radius: 25px; 
+    font-size: 18px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
     max-width: 300px;
     font-family: 'Fredoka One', sans-serif;
     margin-top: 10px;
@@ -151,11 +151,11 @@ label {
 .botinp { 
     padding: 0.8% 10%; 
     max-width: 30%;
-    border: 2px solid #2f3237; /* Grosor y color del borde */
-    border-radius: 25px; /* Radio de los bordes para hacerlos redondeados */
-    font-size: 18px; /* Tamaño del texto */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Agrega transiciones suaves */
+    border: 2px solid #2f3237; 
+    border-radius: 25px; 
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; 
     max-width: 300px;
     font-family: 'Fredoka One', sans-serif;
     margin-top: 0;
@@ -167,7 +167,7 @@ label {
 @media (max-width:1024px) {
     .caja {
         flex-direction: column;
-        height: 94vh; /* Ajustar la altura al 90% del viewport */
+        height: 94vh; 
     }
 
     #titulo2,
@@ -208,26 +208,26 @@ label {
     .botoninp,
     .botonin
      {
-        padding: 2% 5%; /* Ajuste en porcentaje */
-        font-size: 16px; /* Reducir el tamaño del texto para adaptarse */
-        margin-top: 5px; /* Ajustar el margen superior */
-        width: 90%; /* Ajuste para ocupar el 90% del ancho disponible */
+        padding: 2% 5%; 
+        font-size: 16px;    
+        margin-top: 5px; 
+        width: 90%; 
     }
     
     .campo {
-        margin-bottom: 20px; /* Reducir el espacio entre campos */
+        margin-bottom: 20px; 
     }
     
     #button {
-        padding: 3% 5%; /* Ajuste en porcentaje */
+        padding: 3% 5%;
         text-align: center;
-        margin: auto; /* Centrar vertical y horizontalmente */
+        margin: auto;
         font-size: 20px;
         font-family: 'Fredoka One', sans-serif;
-        border: 2px solid #2f3237; /* Agrega el borde */
-        border-radius: 25px; /* Mantén los bordes redondeados */
+        border: 2px solid #2f3237;
+        border-radius: 25px; 
         width: 90%; 
-        max-width: 90%; /* Máximo ancho del botón */
+        max-width: 90%;
     }
     
     p {
